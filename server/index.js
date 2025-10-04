@@ -86,9 +86,12 @@ app.get('/api/test', (req, res) => {
   res.json({ message: 'Backend is working!', timestamp: new Date() })
 })
 
+
 app.get('/', (req, res) => {
   res.send('Hello faizan aziz')
 })
+
+
 
 server.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
