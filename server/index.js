@@ -18,7 +18,7 @@ const server=http.createServer(app)
 
 const io= new Server(server,{
   cors:{
-     origin: ['http://localhost:5173', 'https://localhost:5173' , 'http://192.168.0.106:5173' , "https://chat-app-frontend-black-eight.vercel.app"],
+     origin: ['http://localhost:5173', 'https://localhost:5173' , 'http://192.168.0.106:5173' , "https://faizan-chat-app.vercel.app/"],
      methods:['GET' , 'POST'],
     credentials: true
   }
@@ -69,7 +69,7 @@ io.on('connection', (socket) => {
 });
 
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://localhost:5173' ,  'http://192.168.0.106:5173' , "https://chat-app-frontend-black-eight.vercel.app"], // 🛡️ ONLY this frontend can access
+  origin: ['http://localhost:5173', 'https://localhost:5173' ,  'http://192.168.0.106:5173' , "https://faizan-chat-app.vercel.app/"], // 🛡️ ONLY this frontend can access
   credentials: true // ✅ Allow cookies/auth
 }));
 
