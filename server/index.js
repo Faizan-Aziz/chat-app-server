@@ -13,7 +13,7 @@ const app = express()
 
 // ✅ MOVE CORS MIDDLEWARE UP HERE - BEFORE Socket.io
 app.use(cors({
-  origin: ['http://localhost:5173', 'https://localhost:5173', 'http://192.168.0.106:5173', "https://faizan-chat-app.vercel.app"],
+  origin: ["*"],
   credentials: true
 }));
 
@@ -28,7 +28,7 @@ const server = http.createServer(app)
 // Socket.io configuration (this is correct)
 const io = new Server(server, {
   cors: {
-    origin: ['http://localhost:5173', 'https://localhost:5173', 'http://192.168.0.106:5173', "https://faizan-chat-app.vercel.app"],
+    origin: ["*"],
     methods: ['GET', 'POST'],
     credentials: true
   }
